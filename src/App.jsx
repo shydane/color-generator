@@ -60,7 +60,7 @@ function App() {
           </div>
         )}
         {color && (
-          <div className="mt-5 p-3 bg-slate-700 rounded-lg text-slate-950">
+          <div className="mt-7 p-3 bg-slate-700 rounded-lg text-slate-950">
             <h2 className="text-xl font-semibold">Color Details:</h2>
             <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
               Hex: {color}
