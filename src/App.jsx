@@ -36,13 +36,14 @@ function App() {
 
   return (
     <>
-      <div className="max-w-md m-auto p-5 bg-slate-800 text-slate-300 rounded-md overflow-hidden text-center">
+      <div className="max-w-md m-auto p-5 bg-slate-800 text-slate-950 rounded-md overflow-hidden text-center">
         <h1 className="text-4xl font-semibold mb-3 tracking-tight">
           Color Generator
         </h1>
         <input type="color" value={color} onChange={handleColorChange} />
         <br />
         <input
+          className="mt-3"
           type="range"
           min="0"
           max="1"
@@ -50,18 +51,27 @@ function App() {
           value={opacity}
           onChange={handleOpacityChange}
         />
+        <div className="w-44 h-44 bg-slate-700 m-auto mt-5 rounded-md flex items-center justify-center">
+          {color && (
+            <div
+              className="w-40 h-40 rounded-md"
+              style={{ backgroundColor: color, opacity: opacity }}
+            ></div>
+          )}
+        </div>
         {color && (
-          <div
-            className="w-40 h-40 m-auto mt-5 rounded-md"
-            style={{ backgroundColor: color, opacity: opacity }}
-          ></div>
-        )}
-        {color && (
-          <div>
-            <p>Hex: {color}</p>
-            <p>RGB: {getRgb()}</p>
-            <p>opacity: {getOpacityPercentage()}</p>
-            <pre>
+          <div className="mt-5 p-3 bg-slate-700 rounded-lg text-slate-950">
+            <h2 className="text-xl font-semibold">Color Details:</h2>
+            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+              Hex: {color}
+            </p>
+            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+              RGB: {getRgb()}
+            </p>
+            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+              opacity: {getOpacityPercentage()}
+            </p>
+            <pre className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
               <code>{getCssCode()}</code>
             </pre>
           </div>
