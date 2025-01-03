@@ -51,14 +51,14 @@ function App() {
           value={opacity}
           onChange={handleOpacityChange}
         />
-        <div className="w-44 h-44 bg-slate-700 m-auto mt-5 rounded-md flex items-center justify-center">
-          {color && (
+        {color && (
+          <div className="w-44 h-44 bg-slate-700 m-auto mt-5 rounded-md flex items-center justify-center">
             <div
               className="w-40 h-40 rounded-md"
               style={{ backgroundColor: color, opacity: opacity }}
             ></div>
-          )}
-        </div>
+          </div>
+        )}
         {color && (
           <div className="mt-5 p-3 bg-slate-700 rounded-lg text-slate-950">
             <h2 className="text-xl font-semibold">Color Details:</h2>
