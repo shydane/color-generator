@@ -76,6 +76,7 @@ function App() {
             </pre>
           </div>
         )}
+        <h6 className="text-sm text-start mt-5 text-slate-500">@sydane_98</h6>
       </div>
     </>
   );
