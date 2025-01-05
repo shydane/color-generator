@@ -62,16 +62,16 @@ function App() {
         {color && (
           <div className="mt-7 p-3 bg-slate-700 rounded-lg text-slate-950">
             <h2 className="text-xl font-semibold">Color Details:</h2>
-            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg border-slate-400 border-x-4 border-y-2">
               Hex: {color}
             </p>
-            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg border-slate-400 border-x-4 border-y-2">
               RGB: {getRgb()}
             </p>
-            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+            <p className="my-2 py-1 px-3 bg-slate-800 rounded-lg border-slate-400 border-x-4 border-y-2">
               opacity: {getOpacityPercentage()}
             </p>
-            <pre className="my-2 py-1 px-3 bg-slate-800 rounded-lg">
+            <pre className="my-2 py-1 px-3 bg-slate-800 rounded-lg border-slate-400 border-x-4 border-y-2">
               <code>{getCssCode()}</code>
             </pre>
           </div>
